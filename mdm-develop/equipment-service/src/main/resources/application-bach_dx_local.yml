@@ -1,0 +1,32 @@
+application:
+  security:
+    jwt:
+      secret-key: 5d9bcee44a9f0549cf53d86206bf8d1e98c675ce843bab16685e9d1056e64633
+      expiration: 1800000 #30 minutes
+    refresh-token:
+      expiration: 604800000 #7 days
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3307/mdm_equipment
+    username: root
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  data:
+    mongodb:
+      database: notification
+      host: localhost
+      port: 27017
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: duongbach20231@gmail.com
+    password: elxuzbqqgkrwzjor
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+server:
+  port: 8002

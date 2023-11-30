@@ -1,0 +1,29 @@
+application:
+  security:
+    jwt:
+      secret-key: db3c9e170b50381505ae34d438745f897ccb3ad5cbfcc1608eaba3fee5cc5d20
+      expiration: 120000
+    refresh-token:
+      expiration: 3000000
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/2110
+    username: root
+    password: 1232213
+    driver-class-name: com.mysql.jdbc.Driver
+  flyway:
+    enabled: false
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: bachbim069@gmail.com
+    password: ohhq kxhl csqf vpbr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 8002
